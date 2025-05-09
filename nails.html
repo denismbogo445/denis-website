@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura mobile nails salon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1601655781320-215af05d4f15');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-pink-100 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-pink-600">Aura nail salon</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#home" class="text-pink-600 hover:text-pink-800">Home</a>
+                    <a href="#services" class="text-pink-600 hover:text-pink-800">Services</a>
+                    <a href="#gallery" class="text-pink-600 hover:text-pink-800">Gallery</a>
+                    <a href="#booking" class="text-pink-600 hover:text-pink-800">Book Now</a>
+                    <a href="#contact" class="text-pink-600 hover:text-pink-800">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white">
+        <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Aura mobile nails salon</h2>
+            <p class="text-lg md:text-xl mb-6">Pamper yourself with our luxurious nail care services</p>
+            <a href="#booking" class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700">Book Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-pink-600 mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-pink-600 mb-2">Manicure</h3>
+                    <p class="text-gray-600">Classic, gel, and russian manicures starting at kes 2500</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-pink-600 mb-2">Pedicure</h3>
+                    <p class="text-gray-600">Relaxing spa pedicures starting at kes 2000</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-pink-600 mb-2">Nail Art</h3>
+                    <p class="text-gray-600">Custom designs and embellishments from kes 500</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-pink-600 mb-12">Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="frenchies nails.jpeg" alt="Nail Art 1" class="rounded-lg shadow-md">
+                <img src="cat eye design.jpeg" alt="Nail Art 2" class="rounded-lg shadow-md">
+                <img src="russian manicure.jpeg" alt="Nail Art 3" class="rounded-lg shadow-md">
+                <img src="chrome nails.jpeg" alt="Nail Art 4" class="rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-16 bg-pink-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-pink-600 mb-12">Book Your Appointment</h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+                <div class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">location</label>
+                        <input type="text" id="location" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2">
+                    </div>
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">name</label>
+                        <input type="name" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2">
+                    </div>
+                    <div>
+                        <label for="date" class="block text-sm font-medium text-gray-700">Preferred Date</label>
+                        <input type="date" id="date" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2">
+                    </div>
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-gray-700">Service</label>
+                        <select id="service" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2">
+                            <option>Manicure</option>
+                            <option>Pedicure</option>
+                            <option>Nail Art</option>
+                        </select>
+                    </div>
+                    <button onclick="bookAppointment()" class="w-full bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-pink-600 mb-12">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-pink-600 mb-4">Get in Touch</h3>
+                    <p class="text-gray-600 mb-2"><strong>Phone:</strong> 0792779320</p>
+                    <p class="text-gray-600 mb-2"><strong>Email:</strong> dennismbogo445@gmail.com</p>
+                    <p class="text-gray-600"><strong>Address:</strong> mobile, nairobi.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-pink-600 mb-4">Hours</h3>
+                    <p class="text-gray-600 mb-2">Monday - Friday: 9 AM - 7 PM</p>
+                    <p class="text-gray-600 mb-2">Saturday: 10 AM - 6 PM</p>
+                    <p class="text-gray-600">Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-600 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Aura mobile nail salon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function bookAppointment() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+            const service = document.getElementById('service').value;
+
+            if (name && email && date && service) {
+                alert(`Appointment booked for ${name} on ${date} for ${service}! We'll send a confirmation to ${email}.`);
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+    </script>
